@@ -18,12 +18,12 @@
 2장 | @luckyDaveKim, @KimYunsang-v
 3장 | @madplay, @gaepury
 4장 | @tax-free, @enochyeon
-5장 | @RulLu16, 이정한
+5장 | @RulLu16, @qlqhqo2341
 6장 | @okhee, @luckyDaveKim
 7장 | @KimYunsang-v, @madplay
 8장 | @gaepury, @tax-free
 9장 | @enochyeon, @RulLu16
-10장 | 이정한, @okhee
+10장 | @qlqhqo2341, @okhee
 
 
 ## Reference
