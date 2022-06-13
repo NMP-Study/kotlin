@@ -15,11 +15,11 @@
 ## 발표 순서
 챕터 | 담당
 --|--
-2장 | 김민규, @KimYunsang-v
+2장 | @luckyDaveKim, @KimYunsang-v
 3장 | @madplay, @gaepury
 4장 | 박제현, @enochyeon
 5장 | @RulLu16, 이정한
-6장 | @okhee, 김민규
+6장 | @okhee, @luckyDaveKim
 7장 | @KimYunsang-v, @madplay
 8장 | @gaepury, 박제현
 9장 | @enochyeon, @RulLu16
