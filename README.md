@@ -17,11 +17,11 @@
 --|--
 2장 | @luckyDaveKim, @KimYunsang-v
 3장 | @madplay, @gaepury
-4장 | 박제현, @enochyeon
+4장 | @tax-free, @enochyeon
 5장 | @RulLu16, 이정한
 6장 | @okhee, @luckyDaveKim
 7장 | @KimYunsang-v, @madplay
-8장 | @gaepury, 박제현
+8장 | @gaepury, @tax-free
 9장 | @enochyeon, @RulLu16
 10장 | 이정한, @okhee
 
