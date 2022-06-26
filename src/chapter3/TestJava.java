@@ -12,5 +12,8 @@ public class TestJava {
 
 		// Top-level functions
 		JoinKt.joinToString("hi");
+
+		// Extension functions
+		final char c = Chapter3_3Kt.lastChar("Java");
 	}
 }
