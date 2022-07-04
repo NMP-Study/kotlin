@@ -1,3 +1,9 @@
+## 교재
+
+[Kotlin in Action](http://www.yes24.com/Product/Goods/55148593) | [코틀린 쿡북](http://www.yes24.com/Product/Goods/90452827)
+--|--
+<img src="https://user-images.githubusercontent.com/13449438/177084572-ec1465bc-26ab-470c-b972-f81b8bd8cbf5.jpg" width="300"> | <img src="https://user-images.githubusercontent.com/13449438/177084589-a1d05e75-f4b7-492a-ab0a-db23f457014e.jpg" width="300">
+
 ## 진행 방식
 - github 에서 진행한다.
   - https://github.com/NMP-Study/kotlin/issues
