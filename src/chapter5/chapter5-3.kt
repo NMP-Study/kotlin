@@ -1,6 +1,6 @@
 package chapter5
 
-data class Person(val name: String, val age: Int)
+class Person(var name: String, var age: Int)
 
 class Book(val title: String, val authors: List<String>)
 
@@ -17,8 +17,8 @@ fun lazytest() {
     // sequence 동작 확인하기
     println("noSequence: ")
     val noSequence = listOf(1, 2, 3, 4)
-        .map { print("map($it"); it * it }
-        .filter { print("filter($it"); it % 2 == 0 }
+        .map { print("map($it)"); it * it }
+        .filter { print("filter($it)"); it % 2 == 0 }
         .toList()
     println()
 
@@ -32,7 +32,8 @@ fun lazytest() {
 
     // sequence 순서 확인하기
     println("map > filter")
-    val mapfilter = people.asSequence().map{ print("map "); it.name }.filter { print("filter "); it.length < 4 }.toList()
+    val mapfilter = people.asSequence()
+        .map{ print("map "); it.name }.filter { print("filter "); it.length < 4 }.toList()
     println()
 
     println("filter > map")
@@ -78,12 +79,19 @@ fun alphabetWith():String {
     }
 }
 
-fun alphabetApply() = java.lang.StringBuilder().apply {
-    for (letter in 'A'..'Z') {
-        append(letter)
-    }
-    append("\nNow I know the alphabet!")
-}.toString()
+fun alphabetApply():String {
+    return StringBuilder().apply {
+        for (letter in 'A'..'Z') {
+            append(letter)
+        }
+        append("\nNow I know the alphabet!")
+    }.toString()
+}
+
+fun applyInit(name: String, age: Int) = Person(name, age).apply {
+    this.name = name
+    this.age = 23
+}
 
 fun main() {
     lazytest()
