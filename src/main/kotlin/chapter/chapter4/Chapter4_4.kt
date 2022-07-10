@@ -1,9 +1,12 @@
 package chapter4
 
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import java.awt.Window
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
 import java.io.File
+
 
 object CaseInsensitiveFileComparator: Comparator<File> {
     override fun compare (filel: File, file2: File) : Int {
@@ -42,20 +45,22 @@ class User private constructor(val nickname: String) {
 }
 
 interface JSONFactory<T> {
-    fun fromJSON(jsonText: String?): T
+    fun fromJSON(jsonText: String): T
 }
 
 class Person2(val name: String) {
-    companion object: JSONFactory<Person> {
-        override fun fromJSON(jsonText: String?): Person {
-            return Person("Person")
+    companion object: JSONFactory<Person2> {
+        override fun fromJSON(jsonText: String): Person2 {
+            val mapper = jacksonObjectMapper()
+            val person = mapper.readValue<Person2>(jsonText)
+            return Person2(person.name)
         }
     }
 }
 
 fun <T> loadFromJSON(factory: JSONFactory<T>): T {
     println(factory)
-    return Person2.fromJSON("") as T
+    return Person2.fromJSON("{\"name\":\"Tom\"}") as T
 }
 
 class PersonExtend(val firstName: String, val lastName: String) {
@@ -85,7 +90,7 @@ fun object_test() {
     println(files.sortedWith(CaseInsensitiveFileComparator))
 
     val persons = listOf(Person("Bob"), Person("Alice"))
-    println(persons.sortedWith(Person.NameComparator))
+//    println(persons.sortedWith(Person.NameComparator))
 }
 
 fun compainon_test() {
@@ -94,7 +99,9 @@ fun compainon_test() {
     println(subscribingUser.nickname)
     println(facebookUser.nickname)
 
-    println(loadFromJSON(Person2))
+    val person2 = loadFromJSON(Person2)
+    println(person2)
+    println(person2.name)
 }
 
 fun main() {
