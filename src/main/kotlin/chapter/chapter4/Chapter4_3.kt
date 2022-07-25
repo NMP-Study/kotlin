@@ -15,8 +15,12 @@ data class DataClient(val name: String, val postalCode: Int) {
     fun copy2(name: String = this.name, postalCode: Int = this.postalCode) = DataClient(name, postalCode)
 }
 
-open class SuperClient(var gender: String)
-data class ExtendClient(val name: String, val postalCode: Int): SuperClient("Male")
+open class SuperClient(var gender: String) {}
+data class ExtendClient(val name: String, val postalCode: Int): SuperClient("Male") {
+    override fun equals(other: Any?): Boolean {
+        return super.gender == gender
+    }
+}
 
 /*class DelegatingCollection<T>: Collection<T> {
     private val innerList = arravListof<T>()
