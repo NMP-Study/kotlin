@@ -1,4 +1,4 @@
-package chaptet7
+package chapter.chaptet7
 
 fun main() {
     basicDestructuring()
