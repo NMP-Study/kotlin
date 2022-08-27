@@ -1,4 +1,4 @@
-package chapter.chaptet7
+package chapter.chapter7
 
 import java.beans.PropertyChangeListener
 import java.beans.PropertyChangeSupport

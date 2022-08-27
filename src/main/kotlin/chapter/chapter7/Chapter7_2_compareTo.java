@@ -1,4 +1,4 @@
-package chapter.chaptet7;
+package chapter.chapter7;
 
 public class Chapter7_2_compareTo {
 

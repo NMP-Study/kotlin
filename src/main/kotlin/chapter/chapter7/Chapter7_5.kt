@@ -1,4 +1,4 @@
-package chapter.chaptet7
+package chapter.chapter7
 
 import kotlin.reflect.KProperty
 
